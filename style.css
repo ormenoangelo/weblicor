@@ -1,3 +1,28 @@
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container, .container-fluid {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 body { font-family: 'Arial', sans-serif; }
 .btn-warning { background-color: #d4af37; border: none; }
 .navbar-brand { font-weight: bold; }
@@ -47,29 +72,18 @@ body { font-family: 'Arial', sans-serif; }
     }
     .modal-dialog {
         margin: 1rem;
-        max-width: 98vw;
-    }
-    .modal-content {
-        border-radius: 12px;
-        padding: 0.5rem;
-    }
-    #carritoContenido ul {
-        padding-left: 1rem;
-    }
-    #formContacto .form-control {
-        font-size: 1rem;
-        padding: 0.7rem 1rem;
-    }
-    #formContacto .mb-2 {
-        margin-bottom: 0.8rem !important;
-    }
-    .modal-footer .btn {
-        width: 100%;
-        font-size: 1.1rem;
-        padding: 0.8rem 0;
     }
     .img-portada, .img-portada img {
         width: 100% !important;
         height: auto !important;
+    }
+    .d-flex.gap-2.mb-4 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem !important;
+    }
+    #catalogo .d-flex.gap-2.mb-4 button {
+        min-width: 120px;
+        margin-bottom: 0.5rem;
     }
 }

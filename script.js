@@ -154,6 +154,13 @@ function finalizarCompraWhatsapp() {
     const telefono = '945460792'; // Cambia por el número real
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
+    // Limpiar carrito y formulario
+    carrito = [];
+    localStorage.removeItem('carrito');
+    actualizarCarrito();
+    document.getElementById('contactoNombre').value = '';
+    document.getElementById('contactoTelefono').value = '';
+    document.getElementById('contactoDireccion').value = '';
 }
 
 // Inicialización
