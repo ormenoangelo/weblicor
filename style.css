@@ -47,6 +47,26 @@ body { font-family: 'Arial', sans-serif; }
     }
     .modal-dialog {
         margin: 1rem;
+        max-width: 98vw;
+    }
+    .modal-content {
+        border-radius: 12px;
+        padding: 0.5rem;
+    }
+    #carritoContenido ul {
+        padding-left: 1rem;
+    }
+    #formContacto .form-control {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+    #formContacto .mb-2 {
+        margin-bottom: 0.8rem !important;
+    }
+    .modal-footer .btn {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.8rem 0;
     }
     .img-portada, .img-portada img {
         width: 100% !important;
