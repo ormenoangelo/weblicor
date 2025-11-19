@@ -22,7 +22,9 @@
                     <li class='nav-item'><a class='nav-link' href='#promociones'>Promociones</a></li>
                     <li class='nav-item'><a class='nav-link' href='#contacto'>Contacto</a></li>
                 </ul>
-                <button class='btn btn-warning ms-3' data-bs-toggle='modal' data-bs-target='#carritoModal'>Carrito</button>
+                <button class='btn btn-warning ms-3 position-relative' data-bs-toggle='modal' data-bs-target='#carritoModal'>
+                    Carrito <span id='carritoCantidad' class='badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill'>0</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -52,36 +54,7 @@
             <button class='btn btn-outline-warning' onclick="filtrar('ron')">Ron</button>
         </div>
         <div id='productos' class='row'>
-            <div class='col-md-4 mb-4 producto' data-tipo='vino'>
-                <div class='card bg-secondary text-light'>
-                    <img src='img/vino.jpg' class='card-img-top' alt='Vino'>
-                    <div class='card-body'>
-                        <h5 class='card-title'>Vino Premium</h5>
-                        <p class='card-text'>$10.99</p>
-                        <button class='btn btn-warning' onclick="agregarCarrito('Vino Premium')">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class='col-md-4 mb-4 producto' data-tipo='cerveza'>
-                <div class='card bg-secondary text-light'>
-                    <img src='img/azul.jpg' class='card-img-top' alt='Cerveza'>
-                    <div class='card-body'>
-                        <h5 class='card-title'>Cerveza Artesanal</h5>
-                        <p class='card-text'>S/5.99</p>
-                        <button class='btn btn-warning' onclick="agregarCarrito('Cerveza Artesanal')">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class='col-md-4 mb-4 producto' data-tipo='whisky'>
-                <div class='card bg-secondary text-light'>
-                    <img src='img/red.jpg' class='card-img-top' alt='Whisky'>
-                    <div class='card-body'>
-                        <h5 class='card-title'>Whisky Escocés</h5>
-                        <p class='card-text'>$25.99</p>
-                        <button class='btn btn-warning' onclick="agregarCarrito('Whisky Escocés')">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
+            <!-- Los productos se renderizan dinámicamente con JS -->
         </div>
     </section>
 
