@@ -3,7 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Licorería Premium</title>
+    <title>La jato del trago</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='style.css'>
 </head>
@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <nav class='navbar navbar-expand-lg navbar-dark bg-black fixed-top'>
         <div class='container-fluid'>
-            <a class='navbar-brand text-warning fw-bold' href='#'>Licorería Premium</a>
+            <a class='navbar-brand text-warning fw-bold' href='#'>La jato del trago</a>
             <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav'>
                 <span class='navbar-toggler-icon'></span>
             </button>
@@ -29,8 +29,15 @@
 
     <!-- Banner -->
     <section id='inicio' class='text-center p-5 bg-black mt-5'>
-        <h1 class='text-warning'>Descubre nuestras exclusivas selecciones</h1>
-        <button class='btn btn-warning mt-3' onclick='scrollToCatalog()'>Ver Catálogo</button>
+        <div class="row">
+            <div class="col-md-6 mb-6">
+                <img src="img/portada2.png" width="80%" alt="">
+            </div>
+            <div class="col-md-6 mb-6 ajuste-catalogo">
+                <h1 class='text-warning' style="font-size: 70px;">Descubre nuestras exclusivas selecciones</h1>
+                <button class='btn btn-warning mt-3' onclick='scrollToCatalog()'>Ver Catálogo</button>
+            </div>
+        </div>
     </section>
 
     <!-- Catálogo -->
@@ -57,17 +64,17 @@
             </div>
             <div class='col-md-4 mb-4 producto' data-tipo='cerveza'>
                 <div class='card bg-secondary text-light'>
-                    <img src='img/cerveza.jpg' class='card-img-top' alt='Cerveza'>
+                    <img src='img/azul.jpg' class='card-img-top' alt='Cerveza'>
                     <div class='card-body'>
                         <h5 class='card-title'>Cerveza Artesanal</h5>
-                        <p class='card-text'>$5.99</p>
+                        <p class='card-text'>S/5.99</p>
                         <button class='btn btn-warning' onclick="agregarCarrito('Cerveza Artesanal')">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
             <div class='col-md-4 mb-4 producto' data-tipo='whisky'>
                 <div class='card bg-secondary text-light'>
-                    <img src='img/whisky.jpg' class='card-img-top' alt='Whisky'>
+                    <img src='img/red.jpg' class='card-img-top' alt='Whisky'>
                     <div class='card-body'>
                         <h5 class='card-title'>Whisky Escocés</h5>
                         <p class='card-text'>$25.99</p>
