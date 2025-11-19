@@ -3,6 +3,13 @@ body {
     overflow-x: hidden;
 }
 
+html, body {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 html {
     box-sizing: border-box;
     width: 100vw;
@@ -14,16 +21,46 @@ html {
 }
 
 .container, .container-fluid {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+section, footer {
+    width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
 }
 
-.row {
-    margin-right: 0;
-    margin-left: 0;
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-body { font-family: 'Arial', sans-serif; }
+.navbar {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.navbar .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
 .btn-warning { background-color: #d4af37; border: none; }
 .navbar-brand { font-weight: bold; }
 .card img { height: 200px; object-fit: cover; }
@@ -40,14 +77,26 @@ body { font-family: 'Arial', sans-serif; }
     margin-top: 40px;
 }
 
+/* --- REPARACIÓN Y MEJORA RESPONSIVA GENERAL --- */
+
 /* Mejoras para diseño móvil */
-@media (max-width: 767px) {
-    .navbar-nav {
-        text-align: center;
+@media (max-width: 991px) {
+    .container, .container-fluid {
+        max-width: 100vw !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
     }
     .navbar-collapse {
         background: #111;
         padding-bottom: 1rem;
+        width: 100vw;
+        left: 0;
+        right: 0;
+        margin: 0;
+    }
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
     }
     .ajuste-catalogo {
         padding: 30px 0px 30px 0px;
@@ -72,6 +121,11 @@ body { font-family: 'Arial', sans-serif; }
     }
     .modal-dialog {
         margin: 1rem;
+        max-width: 98vw;
+    }
+    .modal-content {
+        border-radius: 12px;
+        padding: 0.5rem;
     }
     .img-portada, .img-portada img {
         width: 100% !important;
@@ -85,5 +139,51 @@ body { font-family: 'Arial', sans-serif; }
     #catalogo .d-flex.gap-2.mb-4 button {
         min-width: 120px;
         margin-bottom: 0.5rem;
+    }
+}
+
+/* --- Ajustes para centrar cards, mapa y adaptar buscador --- */
+#catalogo .row {
+    justify-content: center;
+}
+
+#catalogo .producto {
+    display: flex;
+    justify-content: center;
+}
+
+#catalogo .card {
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buscador {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+}
+
+#contacto iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    #catalogo .card {
+        max-width: 98vw;
+    }
+    #buscador {
+        max-width: 98vw;
+    }
+    #contacto iframe {
+        max-width: 98vw;
     }
 }
