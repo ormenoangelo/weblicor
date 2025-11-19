@@ -86,9 +86,20 @@
                 </div>
                 <div class='modal-body' id='carritoContenido'>
                     <p>No hay productos en el carrito.</p>
+                    <form id='formContacto' class='mt-3'>
+                        <div class='mb-2'>
+                            <input type='text' class='form-control' id='contactoNombre' placeholder='Tu nombre' required>
+                        </div>
+                        <div class='mb-2'>
+                            <input type='tel' class='form-control' id='contactoTelefono' placeholder='Tu teléfono' required>
+                        </div>
+                        <div class='mb-2'>
+                            <input type='text' class='form-control' id='contactoDireccion' placeholder='Dirección de entrega' required>
+                        </div>
+                    </form>
                 </div>
                 <div class='modal-footer'>
-                    <button class='btn btn-warning'>Finalizar compra</button>
+                    <button class='btn btn-warning' onclick='finalizarCompraWhatsapp()'>Finalizar compra</button>
                 </div>
             </div>
         </div>

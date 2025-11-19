@@ -87,14 +87,30 @@ function actualizarCarrito() {
     let contenido = document.getElementById('carritoContenido');
     let cantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
     document.getElementById('carritoCantidad').textContent = cantidad;
+    let productosHtml = '';
     if (carrito.length === 0) {
-        contenido.innerHTML = '<p>No hay productos en el carrito.</p>';
+        productosHtml = '<p>No hay productos en el carrito.</p>';
     } else {
         let total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-        contenido.innerHTML = '<ul>' + carrito.map(item =>
+        productosHtml = '<ul>' + carrito.map(item =>
             `<li>${item.nombre} x${item.cantidad} - S/${(item.precio * item.cantidad).toFixed(2)} <button class='btn btn-sm btn-danger ms-2' onclick="eliminarDelCarrito('${item.nombre}')">Eliminar</button></li>`
         ).join('') + `</ul><hr><p class='fw-bold'>Total: S/${total.toFixed(2)}</p>`;
     }
+    // Formulario de contacto siempre visible
+    const formHtml = `
+        <form id='formContacto' class='mt-3'>
+            <div class='mb-2'>
+                <input type='text' class='form-control' id='contactoNombre' placeholder='Tu nombre' required>
+            </div>
+            <div class='mb-2'>
+                <input type='tel' class='form-control' id='contactoTelefono' placeholder='Tu teléfono' required>
+            </div>
+            <div class='mb-2'>
+                <input type='text' class='form-control' id='contactoDireccion' placeholder='Dirección de entrega' required>
+            </div>
+        </form>
+    `;
+    contenido.innerHTML = productosHtml + formHtml;
 }
 
 function eliminarDelCarrito(nombreProducto) {
@@ -111,6 +127,33 @@ function mostrarToast(mensaje) {
     toast.innerHTML = `<div class='d-flex'><div class='toast-body'>${mensaje}</div><button type='button' class='btn-close me-2 m-auto' onclick='this.parentElement.parentElement.remove()'></button></div>`;
     document.body.appendChild(toast);
     setTimeout(() => toast.remove(), 2500);
+}
+
+function finalizarCompraWhatsapp() {
+    if (carrito.length === 0) {
+        mostrarToast('El carrito está vacío');
+        return;
+    }
+    // Obtener datos del formulario
+    const nombre = document.getElementById('contactoNombre').value.trim();
+    const telefonoContacto = document.getElementById('contactoTelefono').value.trim();
+    const direccion = document.getElementById('contactoDireccion').value.trim();
+    if (!nombre || !telefonoContacto || !direccion) {
+        mostrarToast('Por favor completa tus datos de contacto');
+        return;
+    }
+    let mensaje = `¡Hola! Quiero hacer un pedido:\n`;
+    mensaje += `Nombre: ${nombre}\n`;
+    mensaje += `Teléfono: ${telefonoContacto}\n`;
+    mensaje += `Dirección: ${direccion}\n\n`;
+    carrito.forEach(item => {
+        mensaje += `- ${item.nombre} x${item.cantidad} (S/${(item.precio * item.cantidad).toFixed(2)})\n`;
+    });
+    let total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+    mensaje += `Total: S/${total.toFixed(2)}`;
+    const telefono = '945460792'; // Cambia por el número real
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
 }
 
 // Inicialización
