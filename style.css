@@ -173,6 +173,89 @@ img, iframe {
     }
 }
 
+/* Cards catálogo/promociones: 2 por fila en móvil, tamaño atractivo */
+@media (max-width: 575.98px) {
+  #productos .col, #promociones .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .card {
+    min-width: 150px;
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+  }
+  .card-img-top {
+    height: 140px !important;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+/* Cards catálogo/promociones: tamaño uniforme y atractivo en todas resoluciones */
+.card {
+  border-radius: 1rem;
+  min-width: 180px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Modal carrito: mejora visual en móvil */
+@media (max-width: 575.98px) {
+  .modal-dialog {
+    max-width: 98vw;
+    margin: 0.5rem auto;
+  }
+  .modal-content {
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  .modal-header, .modal-footer {
+    padding: 0.5rem 1rem;
+  }
+  .modal-body {
+    padding: 0.5rem 1rem;
+  }
+  #carritoContenido form input {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  #carritoContenido button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1rem;
+  }
+}
+
+/* Botón carrito en móvil: mejor visibilidad */
+@media (max-width: 575.98px) {
+  .btn-warning.rounded-circle {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.3rem !important;
+  }
+  #carritoCantidadOff {
+    font-size: 1rem;
+    padding: 0.3em 0.6em;
+  }
+}
+
+/* Ajuste general para cards y botones */
+.card-footer .btn {
+  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 0.7rem 1.2rem;
+}
+
 /* Botón catálogo animado */
 .boton-catalogo-animado {
     box-shadow: 0 4px 16px rgba(0,0,0,0.25);
