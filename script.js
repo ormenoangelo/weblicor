@@ -38,16 +38,20 @@ function renderCatalogo(filtro = 'todos', busqueda = '') {
     }
     productosFiltrados.forEach(producto => {
         const card = document.createElement('div');
-        card.className = 'col-md-4 mb-4 producto';
+        card.className = 'col col-12 col-sm-6 col-md-4 col-lg-3 mb-4 producto';
         card.dataset.tipo = producto.tipo;
         card.innerHTML = `
-            <div class='card bg-secondary text-light h-100'>
-                <img src='${producto.imagen}' class='card-img-top' alt='${producto.nombre}' loading='lazy'>
-                <div class='card-body'>
-                    <h5 class='card-title'>${producto.nombre}</h5>
-                    <p class='card-text'>${producto.descripcion}</p>
-                    <p class='card-text fw-bold'>S/${producto.precio.toFixed(2)}</p>
-                    <button class='btn btn-warning' onclick="agregarCarrito('${producto.nombre}')">Añadir al carrito</button>
+            <div class='card h-100 bg-dark text-light border-warning shadow d-flex flex-column'>
+                <img src='img/portada1.png' class='card-img-top' alt='${producto.nombre}' loading='lazy'>
+                <div class='card-body flex-grow-1'>
+                    <h5 class='card-title text-warning'>${producto.nombre}</h5>
+                    <p class='card-text mb-1'>${producto.descripcion}</p>
+                    <span class='fw-bold text-success fs-5 d-block mb-2'>S/ ${producto.precio.toFixed(2)}</span>
+                </div>
+                <div class='card-footer bg-transparent border-0'>
+                    <button class='btn btn-outline-warning w-100' onclick="agregarCarrito('${producto.nombre}')">
+                        <i class='bi bi-cart-plus'></i> Añadir al carrito
+                    </button>
                 </div>
             </div>
         `;
@@ -81,6 +85,19 @@ function agregarCarrito(nombreProducto) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarCarrito();
     mostrarToast(`${producto.nombre} añadido al carrito`);
+}
+
+function agregarPromoCarrito(promo) {
+    // promo: {nombre, precio}
+    const item = carrito.find(i => i.nombre === promo.nombre);
+    if (item) {
+        item.cantidad++;
+    } else {
+        carrito.push({ nombre: promo.nombre, precio: promo.precio, cantidad: 1 });
+    }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarrito();
+    mostrarToast(`${promo.nombre} añadido al carrito`);
 }
 
 function actualizarCarrito() {

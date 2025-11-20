@@ -86,6 +86,10 @@ img, iframe {
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
     }
+    .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
     .navbar-collapse {
         background: #111;
         padding-bottom: 1rem;
@@ -139,6 +143,65 @@ img, iframe {
     #catalogo .d-flex.gap-2.mb-4 button {
         min-width: 120px;
         margin-bottom: 0.5rem;
+    }
+    .offcanvas {
+        width: 80vw !important;
+        max-width: 320px;
+        border-right: 2px solid #d4af37;
+        transition: transform 0.3s ease;
+    }
+    .offcanvas-header {
+        border-bottom: 1px solid #222;
+    }
+    .offcanvas-title {
+        font-size: 1.5rem;
+    }
+    .offcanvas-body {
+        padding-top: 1rem;
+    }
+    .offcanvas .nav-link {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        transition: color 0.2s;
+    }
+    .offcanvas .nav-link:hover {
+        color: #d4af37 !important;
+    }
+    .offcanvas .btn {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Botón catálogo animado */
+.boton-catalogo-animado {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    background: linear-gradient(90deg, #ffc107 60%, #ffecb3 100%);
+    color: #222 !important;
+    border: none;
+    outline: none;
+    transition: transform .18s, box-shadow .18s, background .18s;
+}
+.boton-catalogo-animado:hover, .boton-catalogo-animado:focus {
+    transform: scale(1.07);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    background: linear-gradient(90deg, #ffecb3 0%, #ffc107 100%);
+    color: #111 !important;
+}
+/* Íconos de Yape y Plin en banner */
+#inicio img[alt='Yape'], #inicio img[alt='Plin'] {
+    filter: drop-shadow(0 2px 8px #000);
+    border: 2px solid #ffc107;
+}
+/* Responsive para íconos */
+@media (max-width: 576px) {
+    #inicio img[alt='Yape'], #inicio img[alt='Plin'] {
+        height: 32px;
+        padding: 2px;
+    }
+    .boton-catalogo-animado {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
     }
 }
 
