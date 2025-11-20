@@ -1,25 +1,88 @@
 // Array de productos
 const productosData = [
     {
-        nombre: 'Vino Premium',
-        precio: 10.99,
-        imagen: 'img/vino.jpg',
+        nombre: 'Vino Tinto Premium',
+        precio: 49.90,
+        imagen: 'img/portada.jpg',
         tipo: 'vino',
-        descripcion: 'Vino de alta calidad.'
+        descripcion: 'Vino tinto de alta calidad, ideal para ocasiones especiales.'
     },
     {
         nombre: 'Cerveza Artesanal',
-        precio: 5.99,
+        precio: 19.90,
         imagen: 'img/azul.jpg',
         tipo: 'cerveza',
-        descripcion: 'Cerveza artesanal refrescante.'
+        descripcion: 'Cerveza artesanal refrescante y de sabor único.'
     },
     {
-        nombre: 'Whisky Escocés',
-        precio: 25.99,
-        imagen: 'img/red.jpg',
+        nombre: 'Whisky Gold',
+        precio: 89.90,
+        imagen: 'img/portada2.png',
         tipo: 'whisky',
-        descripcion: 'Whisky escocés añejo.'
+        descripcion: 'Whisky importado con sabor intenso y suave.'
+    },
+    {
+        nombre: 'Ron Caribeño',
+        precio: 39.90,
+        imagen: 'img/red.jpg',
+        tipo: 'ron',
+        descripcion: 'Ron caribeño tradicional, perfecto para cócteles.'
+    },
+    {
+        nombre: 'Vodka Party',
+        precio: 44.90,
+        imagen: 'img/portada1.png',
+        tipo: 'vodka',
+        descripcion: 'Vodka importado, ideal para fiestas y reuniones.'
+    },
+    {
+        nombre: 'Gin Night',
+        precio: 59.90,
+        imagen: 'img/portada1.png',
+        tipo: 'gin',
+        descripcion: 'Gin premium con notas cítricas y frescas.'
+    },
+    {
+        nombre: 'Tequila Lovers',
+        precio: 69.90,
+        imagen: 'img/portada1.png',
+        tipo: 'tequila',
+        descripcion: 'Tequila especial para los amantes del buen trago.'
+    },
+    {
+        nombre: 'Aperitivo Mix',
+        precio: 19.90,
+        imagen: 'img/portada1.png',
+        tipo: 'aperitivo',
+        descripcion: 'Mix de aperitivos para acompañar tus bebidas.'
+    },
+    {
+        nombre: 'Espumante Deluxe',
+        precio: 34.90,
+        imagen: 'img/portada1.png',
+        tipo: 'espumante',
+        descripcion: 'Espumante de lujo para celebraciones especiales.'
+    },
+    {
+        nombre: 'Mix Sorpresa',
+        precio: 59.90,
+        imagen: 'img/portada1.png',
+        tipo: 'mix',
+        descripcion: '¡Descubre el mix sorpresa del mes!'
+    },
+    {
+        nombre: 'Ron Ginger',
+        precio: 42.90,
+        imagen: 'img/portada1.png',
+        tipo: 'ron',
+        descripcion: 'Ron con jengibre, sabor exótico y refrescante.'
+    },
+    {
+        nombre: 'Promo Sorpresa',
+        precio: 49.90,
+        imagen: 'img/portada1.png',
+        tipo: 'promo',
+        descripcion: '¡Descubre la promo sorpresa del mes!'
     }
 ];
 
