@@ -333,3 +333,62 @@ img, iframe {
         max-width: 98vw;
     }
 }
+
+/* --- MEJORAS VISUALES Y RESPONSIVAS EN CARDS --- */
+
+/* Centrado de texto en cards catálogo y promociones */
+.card-body {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.card-title, .card-text, .fw-bold.fs-5 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Eliminar espacio excesivo entre descripción y botón */
+.card-footer {
+  margin-top: 0 !important;
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.7rem !important;
+  text-align: center;
+}
+.card-body .card-text {
+  margin-bottom: 0.3rem !important;
+}
+
+/* Mejoras para cards de promociones en móvil */
+#promociones .container {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#promociones .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+@media (max-width: 576px) {
+    #promociones .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem !important;
+    }
+    #promociones .col {
+        flex: 0 0 48%;
+        max-width: 48%;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+        margin-bottom: 0 !important;
+    }
+    #promociones .card {
+        min-width: 0;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+/* Ajuste general para cards y separación */
+#promociones .card {
+    margin-bottom: 0;
+    box-shadow: 0 2px 12px rgba(255,193,7,0.12), 0 1.5px 6px rgba(0,0,0,0.18);
+}
