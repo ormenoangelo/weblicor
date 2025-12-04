@@ -1,74 +1,74 @@
 // Array de productos
 const productosData = [
     {
-        nombre: 'Vino Tinto Premium',
-        precio: 49.90,
+        nombre: 'Vino mistela dulce',
+        precio: 17.90,
         imagen: 'img/misteladulce.png',
         tipo: 'vino',
         descripcion: 'Vino tinto de alta calidad, ideal para ocasiones especiales.'
     },
     {
-        nombre: 'Vino Tinto Premium',
-        precio: 49.90,
+        nombre: 'Vino bermelo',
+        precio: 17.90,
         imagen: 'img/bermelobor.png',
         tipo: 'vino',
         descripcion: 'Vino tinto de alta calidad, ideal para ocasiones especiales.'
     },
     {
-        nombre: 'Cerveza Artesanal',
-        precio: 19.90,
+        nombre: 'six pack laton pilsen x6 ',
+        precio: 39.90,
         imagen: 'img/pilsen6.png',
         tipo: 'cerveza',
-        descripcion: 'Cerveza artesanal refrescante y de sabor único.'
+        descripcion: 'pilse callao lata grande x6.'
     },
     {
-        nombre: 'Whisky Gold',
-        precio: 89.90,
+        nombre: 'whisky red label johnnie walker ',
+        precio: 58.90,
         imagen: 'img/redlabelund.png',
         tipo: 'whisky',
-        descripcion: 'Whisky importado con sabor intenso y suave.'
+        descripcion: 'whisky red label johnnie walker 750 ml.'
     },
     {
-        nombre: 'Ron Caribeño',
-        precio: 39.90,
+        nombre: 'ron cartavio black',
+        precio: 35.90,
         imagen: 'img/cartavioblackund.png',
         tipo: 'ron',
-        descripcion: 'Ron caribeño tradicional, perfecto para cócteles.'
+        descripcion: 'ron cartavio black 750 ml.'
     },
     {
-        nombre: 'Vodka Party',
-        precio: 44.90,
+        nombre: 'Pall mall mora',
+        precio: 16.90,
         imagen: 'img/pallmallmora.png',
         tipo: 'promo',
-        descripcion: 'Vodka importado, ideal para fiestas y reuniones.'
+        descripcion: 'Cajetilla de 20 unidades.'
     },
     {
-        nombre: 'Aperitivo Mix',
-        precio: 19.90,
+        nombre: 'Lucky strike mora',
+        precio: 14.90,
         imagen: 'img/luckystrikemora.png',
         tipo: 'promo',
-        descripcion: 'Mix de aperitivos para acompañar tus bebidas.'
+        descripcion: 'Cajetilla de 10 unidades.'
     },
     {
-        nombre: 'Mix Sorpresa',
-        precio: 59.90,
+        nombre: 'Mikes maracuyá',
+        precio: 39.90,
         imagen: 'img/mikesmara6.png',
         tipo: 'promo',
-        descripcion: '¡Descubre el mix sorpresa del mes!'
+        descripcion: '¡Sixpack mikes maracuyá 6 unidades!'
     },
     {
-        nombre: 'Ron Ginger',
-        precio: 42.90,
+        nombre: 'Flor de caña',
+        precio: 49.90,
         imagen: 'img/florcañaund.png',
         tipo: 'ron',
-        descripcion: 'Ron con jengibre, sabor exótico y refrescante.'
+        descripcion: 'Flor de caña 4 años 750ml .'
     },
     {
-        nombre: 'Promo Sorpresa',
-        precio: 49.90,
+        nombre: 'Mikes fresa',
+        precio: 39.90,
         imagen: 'img/mikesfre6.png',
         tipo: 'promo',
-        descripcion: '¡Descubre la promo sorpresa del mes!'
+        descripcion: '¡Sixpack mikes fresa 6 unidades!'
     }
 ];
 
